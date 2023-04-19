@@ -14,35 +14,35 @@ struct MainTabView: View {
         TabView(selection: $selectedTab) {
             EcoDexView()
                 .tabItem {
-                    Image(systemName: "leaf.fill")
+                    Image(systemName: "leaf\(selectedTab == .ecoDex ? ".fill" : "")")
                     Text("EcoDex")
                 }
                 .tag(Tabs.ecoDex)
             
             MapView()
                 .tabItem {
-                    Image(systemName: "map.fill")
+                    Image(systemName: "map\(selectedTab == .map ? ".fill" : "")")
                     Text("Map")
                 }
                 .tag(Tabs.map)
             
             CameraView()
                 .tabItem {
-                    Image(systemName: "camera.fill")
+                    Image(systemName: "camera\(selectedTab == .camera ? ".fill" : "")")
                     Text("Camera")
                 }
                 .tag(Tabs.camera)
             
             RankingsView()
                 .tabItem {
-                    Image(systemName: "crown.fill")
+                    Image(systemName: "crown\(selectedTab == .rankings ? ".fill" : "")")
                     Text("Rankings")
                 }
                 .tag(Tabs.rankings)
             
             ProfileView()
                 .tabItem {
-                    Image(systemName: "person.circle.fill")
+                    Image(systemName: "person.circle\(selectedTab == .profile ? ".fill" : "")")
                     Text("Profile")
                 }
                 .tag(Tabs.profile)
@@ -55,7 +55,7 @@ struct MainTabView: View {
                 .alignmentGuide(.bottom) { d in d[.bottom] }
                                 , alignment: .bottom
         )
-        .offset(x: 0, y: UIScreen.main.bounds.height / 10 - 56)
+        .offset(x: 0, y: UIScreen.main.bounds.height / 10 - 65)
     }
 }
 

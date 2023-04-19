@@ -37,7 +37,7 @@ struct CustomTabBar: View {
                     }
                     
                     VStack(alignment: .center, spacing: 4) {
-                        Image(systemName: "leaf.fill")
+                        Image(systemName: "leaf\(selectedTab == .ecoDex ? ".fill" : "")")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 24, height: 24)
@@ -66,7 +66,7 @@ struct CustomTabBar: View {
                     }
                     
                     VStack(alignment: .center, spacing: 4) {
-                        Image(systemName: "globe.central.south.asia.fill")
+                        Image(systemName: "map\(selectedTab == .map ? ".fill" : "")")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 24, height: 24)
@@ -84,7 +84,7 @@ struct CustomTabBar: View {
             } label: {
                 GeometryReader { geo in
                     VStack(alignment: .center, spacing: 4) {
-                        Image(systemName: "camera.circle.fill")
+                        Image(systemName: "camera.circle\(selectedTab == .camera ? ".fill" : "")")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 60, height: 60)
@@ -108,7 +108,7 @@ struct CustomTabBar: View {
                     }
                     
                     VStack(alignment: .center, spacing: 4) {
-                        Image(systemName: "crown.fill")
+                        Image(systemName: "crown\(selectedTab == .rankings ? ".fill" : "")")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 24, height: 24)
@@ -135,7 +135,7 @@ struct CustomTabBar: View {
                     }
                     
                     VStack(alignment: .center, spacing: 4) {
-                        Image(systemName: "person.fill")
+                        Image(systemName: "person\(selectedTab == .profile ? ".fill" : "")")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 24, height: 24)
