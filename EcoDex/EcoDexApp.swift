@@ -11,7 +11,7 @@ import SwiftUI
 struct EcoDexApp: App {
     var body: some Scene {
         WindowGroup {
-            MainTabView()
+            LogOrSignView()
         }
     }
 }

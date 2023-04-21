@@ -87,7 +87,7 @@ struct CustomTabBar: View {
                         Image(systemName: "camera.circle\(selectedTab == .camera ? ".fill" : "")")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 60, height: 60)
+                            .frame(width: 75, height: 75)
                             .foregroundColor(Color(.systemMint))
                     }
                     .frame(width: geo.size.width, height: geo.size.height)
@@ -148,7 +148,8 @@ struct CustomTabBar: View {
                 }
             }
         }
-        .frame(height: 82)
+        .frame(height: 92)
+        .background(Color("ThemeColor"))
     }
 }
 

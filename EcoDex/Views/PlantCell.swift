@@ -26,7 +26,7 @@ struct PlantCell: View {
                 HStack {
                     Text(plant.type)
                         .font(.subheadline).bold()
-                        .foregroundColor(.mint.opacity(0.4))
+                        .foregroundColor(.mint.opacity(0.2))
                         .padding(.horizontal, 16)
                         .padding(.vertical, 8)
                         .overlay(
@@ -45,7 +45,7 @@ struct PlantCell: View {
                 }
             }
         }
-        .background(.mint.opacity(0.4))
+        .background(.mint.opacity(0.2))
         .cornerRadius(12)
         .shadow(color: .mint, radius: 5, x: 0.0, y: 0.0)
     }

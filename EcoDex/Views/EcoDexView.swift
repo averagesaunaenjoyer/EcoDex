@@ -18,7 +18,6 @@ struct EcoDexView: View {
                     .padding(.leading, 121)
                     .padding(.top, 8)
                 Spacer()
-                Divider()
                 Spacer()
                 ScrollView {
                     LazyVGrid(columns: gridItems, spacing: 16) {
@@ -28,6 +27,8 @@ struct EcoDexView: View {
                     }
                 }
             }
+            .background(Color("ThemeColor"))
+            .ignoresSafeArea()
             .navigationBarTitleDisplayMode(.inline)
         }
         .navigationTitle("EcoDex")
