@@ -1,20 +1,13 @@
-//
-//  CameraView.swift
-//  EcoDex
-//
-//  Created by Serafin dela Paz on 4/18/23.
-//
-
 import SwiftUI
 
-struct CameraView: View {
-    var body: some View {
-        Text("Camera View")
+struct CameraView: UIViewControllerRepresentable {
+   
+    func makeUIViewController(context: Context) -> ViewController {
+        let viewController = ViewController()
+        return viewController
     }
-}
-
-struct CameraView_Previews: PreviewProvider {
-    static var previews: some View {
-        CameraView()
+   
+    func updateUIViewController(_ uiViewController: ViewController, context: Context) {
+        // Leave this empty for now
     }
 }

@@ -117,6 +117,7 @@ struct GetStartedView: View {
                             .frame(width: 150, height: 50)
                             .cornerRadius(25)
                             .foregroundColor(Color("TertiaryTheme"))
+                            .shadow(color: Color(.gray).opacity(0.4), radius: 5)
                         Text("Sign Up")
                             .bold()
                             .foregroundColor(.white)

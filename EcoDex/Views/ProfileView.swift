@@ -9,7 +9,22 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        Text("Profile View")
+        NavigationView {
+            ZStack {
+                Color("ThemeColor")
+                    .ignoresSafeArea()
+                VStack(alignment: .leading) {
+                    HStack {
+                        Circle()
+                            .frame(width: 90, height: 90)
+                            .foregroundColor(Color("TertiaryTheme"))
+                            .padding(.horizontal, 20)
+                        Spacer()
+                    }
+                    
+                }
+            }
+        }
     }
 }
 

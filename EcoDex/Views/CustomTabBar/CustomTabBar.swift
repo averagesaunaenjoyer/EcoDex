@@ -149,7 +149,7 @@ struct CustomTabBar: View {
             }
         }
         .frame(height: 92)
-        .background(Color("ThemeColor"))
+        .background(Color(.white))
     }
 }
 

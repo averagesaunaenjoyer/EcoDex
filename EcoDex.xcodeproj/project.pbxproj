@@ -24,6 +24,8 @@
 		1D19895029EFE77300258724 /* LogOrSignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D19894F29EFE77300258724 /* LogOrSignView.swift */; };
 		1D19895229F08F0C00258724 /* GetStartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D19895129F08F0C00258724 /* GetStartedView.swift */; };
 		1D19895429F08F1900258724 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D19895329F08F1900258724 /* SignInView.swift */; };
+		1D19895729F27B6900258724 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D19895629F27B6900258724 /* ViewController.swift */; };
+		1D19895929F27C0A00258724 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D19895829F27C0A00258724 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		1D19894F29EFE77300258724 /* LogOrSignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOrSignView.swift; sourceTree = "<group>"; };
 		1D19895129F08F0C00258724 /* GetStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedView.swift; sourceTree = "<group>"; };
 		1D19895329F08F1900258724 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		1D19895629F27B6900258724 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1D19895829F27C0A00258724 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		1D19891D29EF367200258724 /* EcoDex */ = {
 			isa = PBXGroup;
 			children = (
+				1D19895529F27B4F00258724 /* UIKitStuff */,
 				1D19892E29EF368800258724 /* Models */,
 				1D19892D29EF368700258724 /* Views */,
 				1D19892C29EF368600258724 /* View Models */,
@@ -136,6 +141,15 @@
 				1D19894329EF3DD500258724 /* CustomNavTitle.swift */,
 			);
 			path = CustomTabBar;
+			sourceTree = "<group>";
+		};
+		1D19895529F27B4F00258724 /* UIKitStuff */ = {
+			isa = PBXGroup;
+			children = (
+				1D19895629F27B6900258724 /* ViewController.swift */,
+				1D19895829F27C0A00258724 /* SceneDelegate.swift */,
+			);
+			path = UIKitStuff;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +229,7 @@
 				1D19893F29EF379200258724 /* ProfileView.swift in Sources */,
 				1D19894229EF37D500258724 /* CustomTabBar.swift in Sources */,
 				1D19893D29EF378A00258724 /* RankingsView.swift in Sources */,
+				1D19895929F27C0A00258724 /* SceneDelegate.swift in Sources */,
 				1D19893529EF372E00258724 /* PlantCell.swift in Sources */,
 				1D19893029EF36C300258724 /* Plant.swift in Sources */,
 				1D19895229F08F0C00258724 /* GetStartedView.swift in Sources */,
@@ -222,6 +237,7 @@
 				1D19893729EF374900258724 /* EcoDexView.swift in Sources */,
 				1D19893329EF36FA00258724 /* MainTabView.swift in Sources */,
 				1D19893B29EF377A00258724 /* CameraView.swift in Sources */,
+				1D19895729F27B6900258724 /* ViewController.swift in Sources */,
 				1D19895029EFE77300258724 /* LogOrSignView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,18 +367,22 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EcoDex/Preview Content\"";
+				DEVELOPMENT_TEAM = W5854WBMY5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow to take photo.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MandemHackin.EcoDex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -379,18 +399,22 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EcoDex/Preview Content\"";
+				DEVELOPMENT_TEAM = W5854WBMY5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow to take photo.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MandemHackin.EcoDex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

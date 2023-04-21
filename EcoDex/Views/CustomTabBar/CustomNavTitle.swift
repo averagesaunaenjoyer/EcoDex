@@ -9,9 +9,9 @@ import SwiftUI
 
 struct CustomNavTitle: View {
     var body: some View {
-        Image("EcoDexTitle")
+        Image("EcoGuy2")
             .resizable()
-            .frame(width: 150, height: 75, alignment: .center)
+            .frame(width: 95, height: 90, alignment: .center)
             .clipped()
             .cornerRadius(20)
     }

@@ -58,7 +58,7 @@ struct MainTabView: View {
                     .alignmentGuide(.bottom) { d in d[.bottom] }
                     , alignment: .bottom
             )
-            .offset(x: 0, y: UIScreen.main.bounds.height / 10 - 74)
+            .offset(x: 0, y: UIScreen.main.bounds.height / 10 - 65)
         }
     }
 }

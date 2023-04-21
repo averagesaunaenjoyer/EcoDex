@@ -12,12 +12,10 @@ struct EcoDexView: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 0) {
+            VStack(alignment: .center, spacing: 0) {
                 CustomNavTitle()
-                    .frame(maxWidth: .infinity, alignment: .topLeading)
-                    .padding(.leading, 121)
+                    .frame(maxWidth: .infinity, alignment: .center)
                     .padding(.top, 8)
-                Spacer()
                 Spacer()
                 ScrollView {
                     LazyVGrid(columns: gridItems, spacing: 16) {
@@ -32,6 +30,7 @@ struct EcoDexView: View {
             .navigationBarTitleDisplayMode(.inline)
         }
         .navigationTitle("EcoDex")
+        .offset(x: 0, y: UIScreen.main.bounds.height / 10 - 95)
     }
 }
 
