@@ -84,7 +84,7 @@ struct CustomTabBar: View {
             } label: {
                 GeometryReader { geo in
                     VStack(alignment: .center, spacing: 4) {
-                        Image(systemName: "camera.circle\(selectedTab == .camera ? ".fill" : "")")
+                        Image(systemName: "camera.circle.fill\(selectedTab == .camera ? ".banana" : "")")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 75, height: 75)

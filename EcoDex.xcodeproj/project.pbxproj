@@ -27,6 +27,7 @@
 		1D19895929F27C0A00258724 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D19895829F27C0A00258724 /* SceneDelegate.swift */; };
 		1D65753029F3864700E764A4 /* NotFoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65752F29F3864700E764A4 /* NotFoundCell.swift */; };
 		1D65753629F3BFA400E764A4 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65753529F3BFA400E764A4 /* MapView.swift */; };
+		1D65753F29F3E5ED00E764A4 /* CaptureImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65753E29F3E5ED00E764A4 /* CaptureImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		1D19895829F27C0A00258724 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1D65752F29F3864700E764A4 /* NotFoundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotFoundCell.swift; sourceTree = "<group>"; };
 		1D65753529F3BFA400E764A4 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		1D65753E29F3E5ED00E764A4 /* CaptureImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				1D19893429EF372E00258724 /* PlantCell.swift */,
 				1D65752F29F3864700E764A4 /* NotFoundCell.swift */,
 				1D19894029EF37AC00258724 /* CustomTabBar */,
+				1D65753E29F3E5ED00E764A4 /* CaptureImage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				1D19892129EF367200258724 /* ContentView.swift in Sources */,
 				1D19893F29EF379200258724 /* ProfileView.swift in Sources */,
 				1D19894229EF37D500258724 /* CustomTabBar.swift in Sources */,
+				1D65753F29F3E5ED00E764A4 /* CaptureImage.swift in Sources */,
 				1D19893D29EF378A00258724 /* RankingsView.swift in Sources */,
 				1D19895929F27C0A00258724 /* SceneDelegate.swift in Sources */,
 				1D19893529EF372E00258724 /* PlantCell.swift in Sources */,

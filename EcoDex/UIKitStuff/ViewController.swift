@@ -43,12 +43,14 @@ class ViewController: UIViewController {
     
     // Shutter Button
     private let shutterButton: UIButton = {
-         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-         button.layer.cornerRadius = 50
-         button.layer.borderWidth = 10
-         button.layer.borderColor = UIColor.white.cgColor
-         return button
-     }()
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        button.layer.cornerRadius = 50
+        button.layer.borderWidth = 10
+        button.layer.borderColor = UIColor.white.cgColor
+        button.backgroundColor = UIColor.systemMint
+        return button
+    }()
+
 
     //  These methods are called when the view controller is loaded or appears on screen. The viewDidLoad() method sets up the view and user interface, while the viewDidAppear(_:) method starts the camera session.
     
@@ -59,7 +61,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
+        view.backgroundColor = UIColor.systemMint
         view.layer.addSublayer(previewLayer)
         view.addSubview(shutterButton)
         view.addSubview(plantNameLabel)
@@ -252,13 +254,14 @@ class ResultViewController: UIViewController {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
     private let plantNameLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 18, weight: .semibold)
-        label.textColor = .black
+        label.textColor = UIColor(named: "TertiaryTheme")
         label.textAlignment = .center
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -281,11 +284,10 @@ class ResultViewController: UIViewController {
         return button
     }()
     
-    
     override func viewDidLoad() {
             super.viewDidLoad()
             
-            view.backgroundColor = .white
+            view.backgroundColor = UIColor(named: "ThemeColor")
             imageView.image = capturedImage
             imageView.contentMode = .scaleAspectFit // Set the content mode to scaleAspectFit
             plantNameLabel.text = plantName
@@ -297,31 +299,29 @@ class ResultViewController: UIViewController {
             
         imageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: plantNameLabel.bottomAnchor, constant: 8),
-            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            imageView.bottomAnchor.constraint(equalTo: saveButton.topAnchor, constant: -8),
-            imageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
-            imageView.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8)
+            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
+            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40) // adjust the constant as needed
         ])
 
             
             NSLayoutConstraint.activate([
-                plantNameLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
+                plantNameLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
                 plantNameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
                 plantNameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
             ])
             
             retakeButton.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
-                retakeButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-                retakeButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -8)
+                retakeButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 75),
+                retakeButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10)
             ])
             
             saveButton.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
-                saveButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-                saveButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -8)
+                saveButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -75),
+                saveButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10)
             ])
             
             saveButton.addTarget(self, action: #selector(savePhoto), for: .touchUpInside)
@@ -329,6 +329,16 @@ class ResultViewController: UIViewController {
             let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeDown))
             swipeDown.direction = .down
             view.addGestureRecognizer(swipeDown)
+        }
+    private func setupUI() {
+            view.addSubview(imageView)
+
+            NSLayoutConstraint.activate([
+                imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+                imageView.widthAnchor.constraint(equalTo: view.widthAnchor),
+                imageView.heightAnchor.constraint(equalTo: view.heightAnchor)
+            ])
         }
     
     @objc private func handleSwipeDown() {

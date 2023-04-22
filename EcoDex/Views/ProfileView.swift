@@ -83,7 +83,7 @@ struct ProfileView: View {
                             Text("\(numberOfPlants)")
                                 .foregroundColor(.white)
                                 .font(.subheadline).bold()
-                                .offset(x: 0, y: 9)
+                                .offset(x: 0, y: 8)
                         }
                     }
                     .offset(x: 0, y: -260)
