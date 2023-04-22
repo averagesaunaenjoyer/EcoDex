@@ -27,7 +27,7 @@ class ViewController: UIViewController {
          let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
          button.layer.cornerRadius = 50
          button.layer.borderWidth = 10
-         button.layer.borderColor = UIColor.white.cgColor
+         button.layer.borderColor = UIColor.systemMint.cgColor
          return button
      }()
 

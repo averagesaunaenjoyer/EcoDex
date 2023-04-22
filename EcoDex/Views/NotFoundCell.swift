@@ -1,16 +1,17 @@
 //
-//  PlantCell.swift
+//  NotFoundCell.swift
 //  EcoDex
 //
-//  Created by Serafin dela Paz on 4/18/23.
+//  Created by Serafin dela Paz on 4/21/23.
 //
 
 import SwiftUI
 
-struct PlantCell: View {
+struct NotFoundCell: View {
     let plant: Plant
     
     var body: some View {
+        
         ZStack {
             VStack(alignment: .leading) {
                 Text(plant.name.capitalized)
@@ -26,7 +27,7 @@ struct PlantCell: View {
                 HStack {
                     Text(plant.type)
                         .font(.subheadline).bold()
-                        .foregroundColor(.mint.opacity(0.2))
+                        .foregroundColor(.mint.opacity(0))
                         .padding(.horizontal, 16)
                         .padding(.vertical, 8)
                         .overlay(
@@ -34,7 +35,6 @@ struct PlantCell: View {
                                 .fill(Color.white.opacity(0))
                         )
                         .frame(width: 100, height: 20)
-                    
                     Image("Verbena")
                         .resizable()
                         .clipShape(Circle())
@@ -42,17 +42,19 @@ struct PlantCell: View {
                         .frame(width: 75, height: 125)
                         .padding([.bottom, .trailing], 2)
                         .offset(x: -50, y: -3)
+                        .colorMultiply(.gray)
                 }
             }
         }
-        .background(.mint.opacity(0.2))
+        .background(.gray.opacity(0.2))
+        .saturation(0)
         .cornerRadius(12)
-        .shadow(color: .mint, radius: 5, x: 0.0, y: 0.0)
+        .shadow(color: .gray, radius: 5, x: 0.0, y: 0.0)
     }
 }
 
-struct PlantCell_Previews: PreviewProvider {
+struct NotFoundCell_Previews: PreviewProvider {
     static var previews: some View {
-        PlantCell(plant: mockPlant[0])
+        NotFoundCell(plant: mockPlant[0])
     }
 }

@@ -59,6 +59,7 @@ struct ProfileView: View {
                             .frame(width: 350, height: 80)
                             .cornerRadius(15)
                             .foregroundColor(.white)
+                            .shadow(color: Color(.gray).opacity(0.4), radius: 5)
                         Text("Hi, I'm (Name)! I'm currently collecting endemic plants in the LA area :)")
                             .frame(width: 330, height: 70)
                     }
