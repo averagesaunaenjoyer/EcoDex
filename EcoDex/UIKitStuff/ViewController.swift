@@ -255,12 +255,13 @@ class ResultViewController: UIViewController {
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        
         return imageView
     }()
     
     private let plantNameLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 18, weight: .semibold)
+        label.font = .systemFont(ofSize: 25, weight: .bold)
         label.textColor = UIColor(named: "TertiaryTheme")
         label.textAlignment = .center
         label.numberOfLines = 0
@@ -270,17 +271,23 @@ class ResultViewController: UIViewController {
     
     private let retakeButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Retake", for: .normal)
+        button.setTitle(" Retake ", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
         button.addTarget(self, action: #selector(retakePhoto), for: .touchUpInside)
+        button.backgroundColor = UIColor(named: "TertiaryTheme")
+        button.layer.cornerRadius = 8
+        button.setTitleColor(.white, for: .normal)
         return button
     }()
     
     private let saveButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Save", for: .normal)
+        button.setTitle(" Add to EcoDex ", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
         button.addTarget(self, action: #selector(savePhoto), for: .touchUpInside)
+        button.backgroundColor = UIColor(named: "TertiaryTheme")
+        button.layer.cornerRadius = 8
+        button.setTitleColor(.white, for: .normal)
         return button
     }()
     
@@ -299,10 +306,10 @@ class ResultViewController: UIViewController {
             
         imageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
+            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
             imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40) // adjust the constant as needed
+            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -150) // adjust the constant as needed
         ])
 
             
@@ -314,14 +321,14 @@ class ResultViewController: UIViewController {
             
             retakeButton.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
-                retakeButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 75),
+                retakeButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 155),
                 retakeButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10)
             ])
             
             saveButton.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
-                saveButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -75),
-                saveButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10)
+                saveButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -122),
+                saveButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -60)
             ])
             
             saveButton.addTarget(self, action: #selector(savePhoto), for: .touchUpInside)
