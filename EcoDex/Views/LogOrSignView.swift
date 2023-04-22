@@ -21,7 +21,7 @@ struct LogOrSignView: View {
                     Spacer()
                     Image("EcoDex")
                         .resizable()
-                        .frame(width: 175, height: 200)
+                        .frame(width: 175, height: 175)
                         .scaledToFit()
                         .cornerRadius(30)
                 }

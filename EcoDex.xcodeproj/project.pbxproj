@@ -26,6 +26,7 @@
 		1D19895429F08F1900258724 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D19895329F08F1900258724 /* SignInView.swift */; };
 		1D19895729F27B6900258724 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D19895629F27B6900258724 /* ViewController.swift */; };
 		1D19895929F27C0A00258724 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D19895829F27C0A00258724 /* SceneDelegate.swift */; };
+		1D65753029F3864700E764A4 /* NotFoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65752F29F3864700E764A4 /* NotFoundCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		1D19895329F08F1900258724 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		1D19895629F27B6900258724 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1D19895829F27C0A00258724 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1D65752F29F3864700E764A4 /* NotFoundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotFoundCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				1D19893C29EF378A00258724 /* RankingsView.swift */,
 				1D19893E29EF379200258724 /* ProfileView.swift */,
 				1D19893429EF372E00258724 /* PlantCell.swift */,
+				1D65752F29F3864700E764A4 /* NotFoundCell.swift */,
 				1D19894029EF37AC00258724 /* CustomTabBar */,
 			);
 			path = Views;
@@ -232,6 +235,7 @@
 				1D19895929F27C0A00258724 /* SceneDelegate.swift in Sources */,
 				1D19893529EF372E00258724 /* PlantCell.swift in Sources */,
 				1D19893029EF36C300258724 /* Plant.swift in Sources */,
+				1D65753029F3864700E764A4 /* NotFoundCell.swift in Sources */,
 				1D19895229F08F0C00258724 /* GetStartedView.swift in Sources */,
 				1D19891F29EF367200258724 /* EcoDexApp.swift in Sources */,
 				1D19893729EF374900258724 /* EcoDexView.swift in Sources */,
