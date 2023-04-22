@@ -20,7 +20,7 @@ struct EcoDexView: View {
                 ScrollView {
                     LazyVGrid(columns: gridItems, spacing: 16) {
                         ForEach(0..<220) { _ in
-                            PlantCell(plant: mockPlant[0])
+                            NotFoundCell(plant: mockPlant[0])
                         }
                     }
                 }

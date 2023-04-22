@@ -43,7 +43,7 @@ struct MainTabView: View {
                     }
                     .tag(Tabs.rankings)
                 
-                ProfileView()
+                ProfileView(plant: mockPlant[0])
                     .tabItem {
                         Image(systemName: "person.circle\(selectedTab == .profile ? ".fill" : "")")
                         Text("Profile")
