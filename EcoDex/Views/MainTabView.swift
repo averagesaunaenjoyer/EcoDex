@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MainTabView: View {
     @State private var selectedTab = Tabs.ecoDex
+    @State var photosWithLocations:
+        [PhotoWithLocation] = []
     
     var body: some View {
         ZStack {
@@ -21,6 +23,13 @@ struct MainTabView: View {
                         Text("EcoDex")
                     }
                     .tag(Tabs.ecoDex)
+                
+//                MapViewWrapper(photosWithLocations: [])
+//                    .tabItem {
+//                        Image(systemName: "map")
+//                        Text("Map")
+//                    }
+//                    .tag(Tabs.map)
                 
                 MapView()
                     .tabItem {
@@ -70,3 +79,16 @@ struct MainTabView_Previews: PreviewProvider {
     }
 }
 
+//struct MapViewWrapper: UIViewControllerRepresentable {
+//    var photosWithLocations: [PhotoWithLocation]
+//
+//    func makeUIViewController(context: Context) -> MapViewController {
+//        let viewController = MapViewController()
+//        viewController.photosWithLocations = photosWithLocations
+//        return viewController
+//    }
+//
+//    func updateUIViewController(_ uiViewController: MapViewController, context: Context) {
+//        // Leave this empty for now
+//    }
+//}
