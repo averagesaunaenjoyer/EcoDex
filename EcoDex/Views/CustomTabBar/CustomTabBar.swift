@@ -11,7 +11,7 @@ enum Tabs: Int {
     case ecoDex = 0
     case map = 1
     case camera = 2
-    case rankings = 3
+    case explore = 3
     case profile = 4
 }
 
@@ -53,6 +53,48 @@ struct CustomTabBar: View {
             }
             
             Button {
+                selectedTab = .explore
+            } label: {
+                GeometryReader { geo in
+                    
+                    if selectedTab == .explore {
+                        Rectangle()
+                            .foregroundColor(Color(.systemMint))
+                            .frame(width: geo.size.width/2, height: 4)
+                            .padding(.leading, geo.size.width/4)
+                            .matchedGeometryEffect(id: "switch", in: animation)
+                    }
+                    
+                    VStack(alignment: .center, spacing: 4) {
+                        Image(systemName: "magnifyingglass.circle\(selectedTab == .explore ? ".fill" : "")")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 24, height: 24)
+                            .foregroundColor(Color(.systemMint))
+                        Text("Explore")
+                            .font(Font.custom("LexendDeca-Regular", size: 12))
+                            .foregroundColor(Color(.systemMint))
+                    }
+                    .frame(width: geo.size.width, height: geo.size.height)
+                }
+            }
+            
+            Button {
+                selectedTab = .camera
+            } label: {
+                GeometryReader { geo in
+                    VStack(alignment: .center, spacing: 4) {
+                        Image(systemName: "camera.circle.fill\(selectedTab == .camera ? ".banana" : "")")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 75, height: 75)
+                            .foregroundColor(Color(.systemMint))
+                    }
+                    .frame(width: geo.size.width, height: geo.size.height)
+                }
+            }
+            
+            Button {
                 selectedTab = .map
             } label: {
                 GeometryReader { geo in
@@ -80,48 +122,6 @@ struct CustomTabBar: View {
             }
             
             Button {
-                selectedTab = .camera
-            } label: {
-                GeometryReader { geo in
-                    VStack(alignment: .center, spacing: 4) {
-                        Image(systemName: "camera.circle.fill\(selectedTab == .camera ? ".banana" : "")")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 75, height: 75)
-                            .foregroundColor(Color(.systemMint))
-                    }
-                    .frame(width: geo.size.width, height: geo.size.height)
-                }
-            }
-            
-            Button {
-                selectedTab = .rankings
-            } label: {
-                GeometryReader { geo in
-                    
-                    if selectedTab == .rankings {
-                        Rectangle()
-                            .foregroundColor(Color(.systemMint))
-                            .frame(width: geo.size.width/2, height: 4)
-                            .padding(.leading, geo.size.width/4)
-                            .matchedGeometryEffect(id: "switch", in: animation)
-                    }
-                    
-                    VStack(alignment: .center, spacing: 4) {
-                        Image(systemName: "crown\(selectedTab == .rankings ? ".fill" : "")")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 24, height: 24)
-                            .foregroundColor(Color(.systemMint))
-                        Text("Rankings")
-                            .font(Font.custom("LexendDeca-Regular", size: 12))
-                            .foregroundColor(Color(.systemMint))
-                    }
-                    .frame(width: geo.size.width, height: geo.size.height)
-                }
-            }
-            
-            Button {
                 selectedTab = .profile
             } label: {
                 GeometryReader { geo in
@@ -135,7 +135,7 @@ struct CustomTabBar: View {
                     }
                     
                     VStack(alignment: .center, spacing: 4) {
-                        Image(systemName: "person\(selectedTab == .profile ? ".fill" : "")")
+                        Image(systemName: "person.circle\(selectedTab == .profile ? ".fill" : "")")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 24, height: 24)

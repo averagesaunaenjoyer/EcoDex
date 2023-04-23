@@ -8,8 +8,45 @@
 import SwiftUI
 
 struct RankingsView: View {
+    @State var searchText = ""
+
     var body: some View {
-        Text("Rankings View")
+        ZStack {
+            Color("ThemeColor")
+                .ignoresSafeArea()
+            VStack {
+                HStack {
+                    Image(systemName: "magnifyingglass")
+                        .foregroundColor(.gray)
+                    TextField("Search by username...", text: $searchText)
+                    
+                        .disableAutocorrection(true)
+                        .autocapitalization(.none)
+                        .overlay(
+                            Image(systemName: "xmark.circle.fill")
+                                .padding()
+                                .offset(x: 10)
+                                .foregroundColor(.gray)
+                                .opacity(searchText.isEmpty ? 0.0 : 1.0)
+                                .onTapGesture {
+                                    searchText = ""
+                                }
+                            
+                            ,alignment: .trailing
+                        )
+                }
+                .font(.headline)
+                .padding()
+                .background(
+                    RoundedRectangle(cornerRadius: 25)
+                        .fill(.white)
+                        .shadow(
+                            color: .gray.opacity(0.4),
+                            radius: 6
+                        )
+                )
+            }
+        }
     }
 }
 

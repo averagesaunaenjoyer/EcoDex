@@ -10,6 +10,7 @@ import SwiftUI
 struct LogOrSignView: View {
     @State private var showingGetStarted = false
     @State private var showingSignIn = false
+    @State var isLoading = true
     
     var body: some View {
         ZStack {
@@ -66,6 +67,11 @@ struct LogOrSignView: View {
             }
         }
     }
+//    .onAppear {
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+//            isLoading = false
+//        }
+//    }
 }
 
 

@@ -18,45 +18,18 @@ struct MainTabView: View {
                 .ignoresSafeArea()
             TabView(selection: $selectedTab) {
                 EcoDexView()
-                    .tabItem {
-                        Image(systemName: "leaf\(selectedTab == .ecoDex ? ".fill" : "")")
-                        Text("EcoDex")
-                    }
                     .tag(Tabs.ecoDex)
                 
-//                MapViewWrapper(photosWithLocations: [])
-//                    .tabItem {
-//                        Image(systemName: "map")
-//                        Text("Map")
-//                    }
-//                    .tag(Tabs.map)
-                
                 MapView()
-                    .tabItem {
-                        Image(systemName: "map\(selectedTab == .map ? ".fill" : "")")
-                        Text("Map")
-                    }
                     .tag(Tabs.map)
                 
                 CameraView()
-                    .tabItem {
-                        Image(systemName: "camera\(selectedTab == .camera ? ".fill" : "")")
-                        Text("Camera")
-                    }
                     .tag(Tabs.camera)
                 
-                RankingsView()
-                    .tabItem {
-                        Image(systemName: "crown\(selectedTab == .rankings ? ".fill" : "")")
-                        Text("Rankings")
-                    }
-                    .tag(Tabs.rankings)
+                ExploreView()
+                    .tag(Tabs.explore)
                 
                 ProfileView(plant: mockPlant[0])
-                    .tabItem {
-                        Image(systemName: "person.circle\(selectedTab == .profile ? ".fill" : "")")
-                        Text("Profile")
-                    }
                     .tag(Tabs.profile)
             }
             .overlay(
@@ -67,6 +40,7 @@ struct MainTabView: View {
                     .alignmentGuide(.bottom) { d in d[.bottom] }
                     , alignment: .bottom
             )
+            .ignoresSafeArea(.keyboard)
             .offset(x: 0, y: UIScreen.main.bounds.height / 10 - 65)
         }
     }

@@ -8,19 +8,28 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @Environment(\.presentationMode) var mode
     @State private var numberOfPlants = 57
     @State private var name = "Name"
     @State private var username = "username"
     let plant: Plant
     
     var body: some View {
-        NavigationView {
             ZStack {
                 Color("ThemeColor")
                     .ignoresSafeArea()
                 VStack {
                     Spacer()
                     Spacer()
+                    Button {
+                        mode.wrappedValue.dismiss()
+                    } label: {
+                        Image(systemName: "arrow.left")
+                            .resizable()
+                            .frame(width: 40, height: 40)
+                            .foregroundColor(Color("TertiaryTheme"))
+                            .offset(x: -165, y: -380)
+                    }
                     HStack {
                         Circle()
                             .frame(width: 120, height: 120)
@@ -127,7 +136,6 @@ struct ProfileView: View {
             }
         }
     }
-}
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
