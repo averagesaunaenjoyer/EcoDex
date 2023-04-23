@@ -269,17 +269,6 @@ class ResultViewController: UIViewController {
         return label
     }()
     
-    private let retakeButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle(" Retake ", for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
-        button.addTarget(self, action: #selector(retakePhoto), for: .touchUpInside)
-        button.backgroundColor = UIColor(named: "TertiaryTheme")
-        button.layer.cornerRadius = 8
-        button.setTitleColor(.white, for: .normal)
-        return button
-    }()
-    
     private let saveButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle(" Add to EcoDex ", for: .normal)
@@ -301,7 +290,6 @@ class ResultViewController: UIViewController {
             
             view.addSubview(imageView)
             view.addSubview(plantNameLabel)
-            view.addSubview(retakeButton)
             view.addSubview(saveButton)
             
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -319,16 +307,10 @@ class ResultViewController: UIViewController {
                 plantNameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
             ])
             
-            retakeButton.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                retakeButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 155),
-                retakeButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10)
-            ])
-            
             saveButton.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
                 saveButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -122),
-                saveButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -60)
+                saveButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30)
             ])
             
             saveButton.addTarget(self, action: #selector(savePhoto), for: .touchUpInside)

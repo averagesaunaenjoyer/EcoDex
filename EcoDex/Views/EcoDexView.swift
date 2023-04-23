@@ -9,6 +9,8 @@ import SwiftUI
 
 struct EcoDexView: View {
     private let gridItems = [GridItem(.flexible()), GridItem(.flexible())]
+    @State private var showingPlantInfo = false
+    @State private var settingsDetent = PresentationDetent.medium
     
     var body: some View {
         NavigationView {
@@ -20,8 +22,15 @@ struct EcoDexView: View {
                 ScrollView {
                     LazyVGrid(columns: gridItems, spacing: 16) {
                         ForEach(0..<220) { _ in
-                            NotFoundCell(plant: mockPlant[0])
+                            PlantCell(plant: mockPlant[0], isPresented: $showingPlantInfo)
                         }
+                    }
+                    .sheet(isPresented: $showingPlantInfo) {
+                        InfoView(plantInfo: mockPlantInfo[0])
+                            .presentationDetents(
+                                [.medium],
+                                selection: $settingsDetent
+                            )
                     }
                 }
             }

@@ -16,6 +16,8 @@ struct Place: Identifiable {
 
 struct MapView: View {
     @StateObject var viewModel = MapViewModel()
+    @State private var showingCaptureInfo = false
+    @State private var settingsDetent = PresentationDetent.height(300)
     
     let annotations = [
         Place(name: "Court of Sciences", coordinate: CLLocationCoordinate2D(latitude: 34.06848, longitude: -118.44224)),
@@ -27,19 +29,30 @@ struct MapView: View {
         Map(coordinateRegion: $viewModel.region, showsUserLocation: true, annotationItems: annotations) { place in
             MapAnnotation(coordinate: place.coordinate) {
                 HStack {
-                    Image(systemName: "tree.fill")
-                        .foregroundColor(Color(.systemMint))
+                    Image(systemName: "tree")
+                        .foregroundColor(Color(.white))
                 }
+                .shadow(color: .gray, radius: 3)
                 .padding(6)
-                .background(Color(.white))
+                .background(Color(.systemMint))
                 .cornerRadius(100)
                 .frame(width: 10, height: 10)
+                .onTapGesture {
+                    showingCaptureInfo = true
+                }
             }
         }
             .ignoresSafeArea()
             .accentColor(Color(.systemMint))
             .onAppear {
                 viewModel.checkIfLocationServicesIsEnabled()
+            }
+            .sheet(isPresented: $showingCaptureInfo) {
+                CaptureInfoView()
+                    .presentationDetents(
+                        [.height(300)],
+                        selection: $settingsDetent
+                    )
             }
     }
 }

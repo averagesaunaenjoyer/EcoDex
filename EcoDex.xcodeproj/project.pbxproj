@@ -33,6 +33,10 @@
 		1D65754D29F4A97100E764A4 /* UserRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65754C29F4A97100E764A4 /* UserRowView.swift */; };
 		1D65754F29F4EFEC00E764A4 /* MapSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65754E29F4EFEC00E764A4 /* MapSettings.swift */; };
 		1D65755129F4F00D00E764A4 /* NewMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65755029F4F00D00E764A4 /* NewMapView.swift */; };
+		1D65755329F504C000E764A4 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65755229F504C000E764A4 /* InfoView.swift */; };
+		1D65755529F5051900E764A4 /* PlantInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65755429F5051900E764A4 /* PlantInfo.swift */; };
+		1D65755729F5259500E764A4 /* NoInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65755629F5259500E764A4 /* NoInfoView.swift */; };
+		1D65755929F533DE00E764A4 /* CaptureInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65755829F533DE00E764A4 /* CaptureInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +67,10 @@
 		1D65754C29F4A97100E764A4 /* UserRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRowView.swift; sourceTree = "<group>"; };
 		1D65754E29F4EFEC00E764A4 /* MapSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSettings.swift; sourceTree = "<group>"; };
 		1D65755029F4F00D00E764A4 /* NewMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMapView.swift; sourceTree = "<group>"; };
+		1D65755229F504C000E764A4 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		1D65755429F5051900E764A4 /* PlantInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantInfo.swift; sourceTree = "<group>"; };
+		1D65755629F5259500E764A4 /* NoInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInfoView.swift; sourceTree = "<group>"; };
+		1D65755829F533DE00E764A4 /* CaptureInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,10 +146,13 @@
 				1D19893E29EF379200258724 /* ProfileView.swift */,
 				1D19893429EF372E00258724 /* PlantCell.swift */,
 				1D65752F29F3864700E764A4 /* NotFoundCell.swift */,
+				1D65755229F504C000E764A4 /* InfoView.swift */,
+				1D65755629F5259500E764A4 /* NoInfoView.swift */,
 				1D19894029EF37AC00258724 /* CustomTabBar */,
 				1D65754029F404F100E764A4 /* LoadingView.swift */,
 				1D65754629F46F2700E764A4 /* SearchView.swift */,
 				1D65754A29F4A94F00E764A4 /* ExploreView.swift */,
+				1D65755829F533DE00E764A4 /* CaptureInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -150,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				1D19892F29EF36C300258724 /* Plant.swift */,
+				1D65755429F5051900E764A4 /* PlantInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -246,6 +258,7 @@
 				1D65754729F46F2700E764A4 /* SearchView.swift in Sources */,
 				1D19895429F08F1900258724 /* SignInView.swift in Sources */,
 				1D19894429EF3DD500258724 /* CustomNavTitle.swift in Sources */,
+				1D65755929F533DE00E764A4 /* CaptureInfoView.swift in Sources */,
 				1D19892129EF367200258724 /* ContentView.swift in Sources */,
 				1D19893F29EF379200258724 /* ProfileView.swift in Sources */,
 				1D19894229EF37D500258724 /* CustomTabBar.swift in Sources */,
@@ -266,7 +279,10 @@
 				1D19893B29EF377A00258724 /* CameraView.swift in Sources */,
 				1D19895729F27B6900258724 /* ViewController.swift in Sources */,
 				1D65754129F404F100E764A4 /* LoadingView.swift in Sources */,
+				1D65755729F5259500E764A4 /* NoInfoView.swift in Sources */,
+				1D65755329F504C000E764A4 /* InfoView.swift in Sources */,
 				1D19895029EFE77300258724 /* LogOrSignView.swift in Sources */,
+				1D65755529F5051900E764A4 /* PlantInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

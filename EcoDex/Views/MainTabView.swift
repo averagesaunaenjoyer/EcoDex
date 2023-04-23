@@ -9,8 +9,6 @@ import SwiftUI
 
 struct MainTabView: View {
     @State private var selectedTab = Tabs.ecoDex
-    @State var photosWithLocations:
-        [PhotoWithLocation] = []
     
     var body: some View {
         ZStack {
@@ -20,7 +18,7 @@ struct MainTabView: View {
                 EcoDexView()
                     .tag(Tabs.ecoDex)
                 
-                ContentView()
+                MapView()
                     .tag(Tabs.map)
                 
                 CameraView()

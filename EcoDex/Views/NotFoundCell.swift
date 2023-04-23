@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NotFoundCell: View {
     let plant: Plant
+    @Binding var isPresented: Bool
     
     var body: some View {
         
@@ -45,6 +46,9 @@ struct NotFoundCell: View {
                         .colorMultiply(.gray)
                 }
             }
+            .onTapGesture {
+                isPresented = true
+            }
         }
         .background(.gray.opacity(0.2))
         .saturation(0)
@@ -54,7 +58,9 @@ struct NotFoundCell: View {
 }
 
 struct NotFoundCell_Previews: PreviewProvider {
+    @State static var isPresented = false
+    
     static var previews: some View {
-        NotFoundCell(plant: mockPlant[0])
+        NotFoundCell(plant: mockPlant[0], isPresented: $isPresented)
     }
 }

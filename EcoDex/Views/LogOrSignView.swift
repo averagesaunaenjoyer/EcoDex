@@ -42,7 +42,7 @@ struct LogOrSignView: View {
                             .foregroundColor(.white)
                     }
                 }
-                .fullScreenCover(isPresented: $showingGetStarted) {
+                .sheet(isPresented: $showingGetStarted) {
                     GetStartedView()
                 }
                 Button(action: {

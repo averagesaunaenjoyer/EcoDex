@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PlantCell: View {
     let plant: Plant
+    @Binding var isPresented: Bool
     
     var body: some View {
         ZStack {
@@ -44,6 +45,9 @@ struct PlantCell: View {
                         .offset(x: -50, y: -3)
                 }
             }
+            .onTapGesture {
+                isPresented = true
+            }
         }
         .background(.mint.opacity(0.2))
         .cornerRadius(12)
@@ -52,7 +56,9 @@ struct PlantCell: View {
 }
 
 struct PlantCell_Previews: PreviewProvider {
+    @State static var isPresented = false
+    
     static var previews: some View {
-        PlantCell(plant: mockPlant[0])
+        PlantCell(plant: mockPlant[0], isPresented: $isPresented)
     }
 }
