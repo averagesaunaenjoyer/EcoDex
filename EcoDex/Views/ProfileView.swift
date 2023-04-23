@@ -100,34 +100,8 @@ struct ProfileView: View {
                         .font(.title2).bold()
                         .foregroundColor(Color("TertiaryTheme"))
                         .offset(x: 0, y: -257)
-                    ScrollView(.horizontal) {
-                        HStack {
-                            ForEach(0..<10) { index in
-                                ZStack {
-                                    Rectangle()
-                                        .frame(width: 150, height: 200)
-                                        .cornerRadius(15)
-                                        .foregroundColor(.white)
-                                        .padding(.horizontal, 2)
-                                    VStack {
-                                        Image("Verbena")
-                                            .resizable()
-                                            .frame(width: 140, height: 140)
-                                            .cornerRadius(15)
-                                            .shadow(color: Color(.gray).opacity(0.4), radius: 5)
-                                            .offset(x: 0, y: -4)
-                                        VStack {
-                                            Text(plant.name)
-                                            Text(plant.scientific)
-                                                .font(.caption)
-                                        }
-                                        .offset(x: 0, y: -4)
-                                    }
-                                }
-                                .padding(.horizontal, 2)
-                            }
-                            .padding(5)
-                        }
+                    VStack {
+                        NothingToSeeHereView()
                     }
                     .offset(x: 0, y: -257)
                     Spacer()

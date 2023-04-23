@@ -9,15 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject var mapSettings = MapSettings()
-    @State var mapType = 0
-    @State var showElevation = 0
-    @State var showEmphasis = 0
-    
     var body: some View {
-        ZStack {
-            NewMapView()
-                .ignoresSafeArea().environmentObject(mapSettings)
-        }
+        Text("Hello World")
     }
 }
