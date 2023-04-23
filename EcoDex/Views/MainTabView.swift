@@ -20,7 +20,7 @@ struct MainTabView: View {
                 EcoDexView()
                     .tag(Tabs.ecoDex)
                 
-                MapView()
+                ContentView()
                     .tag(Tabs.map)
                 
                 CameraView()

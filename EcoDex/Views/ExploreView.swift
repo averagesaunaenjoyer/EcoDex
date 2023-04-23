@@ -41,7 +41,7 @@ struct ExploreView: View {
                             .fill(.white)
                             .shadow(
                                 color: .gray.opacity(0.4),
-                                radius: 6
+                                radius: 5
                             )
                             .padding(.horizontal, 7)
                             .padding(.vertical, 7)

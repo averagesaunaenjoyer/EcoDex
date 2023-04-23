@@ -31,6 +31,8 @@
 		1D65754729F46F2700E764A4 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65754629F46F2700E764A4 /* SearchView.swift */; };
 		1D65754B29F4A95000E764A4 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65754A29F4A94F00E764A4 /* ExploreView.swift */; };
 		1D65754D29F4A97100E764A4 /* UserRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65754C29F4A97100E764A4 /* UserRowView.swift */; };
+		1D65754F29F4EFEC00E764A4 /* MapSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65754E29F4EFEC00E764A4 /* MapSettings.swift */; };
+		1D65755129F4F00D00E764A4 /* NewMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65755029F4F00D00E764A4 /* NewMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,8 @@
 		1D65754629F46F2700E764A4 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		1D65754A29F4A94F00E764A4 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		1D65754C29F4A97100E764A4 /* UserRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRowView.swift; sourceTree = "<group>"; };
+		1D65754E29F4EFEC00E764A4 /* MapSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSettings.swift; sourceTree = "<group>"; };
+		1D65755029F4F00D00E764A4 /* NewMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 				1D19892029EF367200258724 /* ContentView.swift */,
 				1D19892229EF367500258724 /* Assets.xcassets */,
 				1D19892429EF367500258724 /* Preview Content */,
+				1D65754E29F4EFEC00E764A4 /* MapSettings.swift */,
+				1D65755029F4F00D00E764A4 /* NewMapView.swift */,
 			);
 			path = EcoDex;
 			sourceTree = "<group>";
@@ -251,9 +257,11 @@
 				1D19893029EF36C300258724 /* Plant.swift in Sources */,
 				1D65753029F3864700E764A4 /* NotFoundCell.swift in Sources */,
 				1D19895229F08F0C00258724 /* GetStartedView.swift in Sources */,
+				1D65755129F4F00D00E764A4 /* NewMapView.swift in Sources */,
 				1D19891F29EF367200258724 /* EcoDexApp.swift in Sources */,
 				1D19893729EF374900258724 /* EcoDexView.swift in Sources */,
 				1D19893329EF36FA00258724 /* MainTabView.swift in Sources */,
+				1D65754F29F4EFEC00E764A4 /* MapSettings.swift in Sources */,
 				1D65753629F3BFA400E764A4 /* MapView.swift in Sources */,
 				1D19893B29EF377A00258724 /* CameraView.swift in Sources */,
 				1D19895729F27B6900258724 /* ViewController.swift in Sources */,
