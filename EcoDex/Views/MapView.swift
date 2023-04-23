@@ -30,7 +30,7 @@ struct MapView: View {
                     Image(systemName: "tree.fill")
                         .foregroundColor(Color(.systemMint))
                 }
-                .padding(5)
+                .padding(6)
                 .background(Color(.white))
                 .cornerRadius(100)
                 .frame(width: 10, height: 10)
